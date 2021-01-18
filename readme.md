@@ -17,3 +17,5 @@ A json API simulating a bank (as in investment bank) server built during [Revatu
 * Start API. Deploy the war file created in the last step to tomcat. Make it is deployed to `/BankAPI`. The servlets parse the URIs, and expect them to start with `/BankAPI`.
 * Set up html server. Configure nginx to serve static files from the frontend/dist directory. Also, configure nginx as a reverse proxy, passing all requests with a URI beginning with /BankAPI/ to the tomcat server.
 
+## Note on git
+The project was built while working in a shared git repository containing unrelated code. Thus, this git repository has no commit history.
