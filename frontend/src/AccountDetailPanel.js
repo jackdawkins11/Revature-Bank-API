@@ -26,7 +26,7 @@ function AccountDetailPanel(props) {
     //Loads the types from the server
     const loadTypes = () => {
         //Fetch all types
-        fetch('BankAPI/accountTypes', {
+        fetch('/BankAPI/accountTypes', {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -47,7 +47,7 @@ function AccountDetailPanel(props) {
     //Loads the statuss from the server
     const loadStatuss = () => {
         //Fetch all statuss
-        fetch('BankAPI/accountStatus', {
+        fetch('/BankAPI/accountStatus', {
             method: "GET"
         }).then(response => {
             //Check response status code

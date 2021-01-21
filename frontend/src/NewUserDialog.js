@@ -28,7 +28,7 @@ class NewUserDialog extends React.Component {
 
     loadRoles() {
         //Fetch all AccountStatus
-        fetch('BankAPI/roles', {
+        fetch('/BankAPI/roles', {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -64,7 +64,7 @@ class NewUserDialog extends React.Component {
         let roleId = this.state.allRoles[this.state.roleIdx].id
 
         //Make request
-        fetch('BankAPI/register', {
+        fetch('/BankAPI/register', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

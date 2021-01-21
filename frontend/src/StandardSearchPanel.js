@@ -16,7 +16,7 @@ function StandardSearchPanel(props) {
     useEffect(() => {
         //This runs once after the first render
         //Fetch all accounts
-        fetch(`BankAPI/accounts/owner/${props.user.id}`, {
+        fetch(`/BankAPI/accounts/owner/${props.user.id}`, {
             method: "GET"
         }).then(response => {
             //Check response status code

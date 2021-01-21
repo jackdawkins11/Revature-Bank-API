@@ -17,7 +17,7 @@ function App(props) {
 
     const checkSession = () => {
         //Make the POST request
-        fetch('BankAPI/checkSession', {
+        fetch('/BankAPI/checkSession', {
             method: "POST"
         }).then((response) => {
             //Reject promise based on status code
@@ -43,7 +43,7 @@ function App(props) {
     //credentials
     const tryLogin = (username, password) => {
         //Make the POST request
-        fetch('BankAPI/login', {
+        fetch('/BankAPI/login', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
@@ -76,7 +76,7 @@ function App(props) {
     const tryLogout = () => {
         console.log("Trying logout")
         //Make POST request
-        fetch('BankAPI/logout', {
+        fetch('/BankAPI/logout', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

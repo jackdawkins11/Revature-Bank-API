@@ -25,7 +25,7 @@ function UserDetailPanel(props) {
     //Loads the roles from the server
     function loadRoles() {
         //Fetch all roles
-        fetch('BankAPI/roles', {
+        fetch('/BankAPI/roles', {
             method: "GET"
         }).then(response => {
             //Check response status code

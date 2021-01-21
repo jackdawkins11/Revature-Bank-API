@@ -38,7 +38,7 @@ class NewAccountDialog extends React.Component {
 
     loadStatus() {
         //Fetch all AccountStatus
-        fetch('BankAPI/accountStatus', {
+        fetch('/BankAPI/accountStatus', {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -60,7 +60,7 @@ class NewAccountDialog extends React.Component {
 
     loadTypes() {
         //Fetch all AccountTypes
-        fetch('BankAPI/accountTypes', {
+        fetch('/BankAPI/accountTypes', {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -82,7 +82,7 @@ class NewAccountDialog extends React.Component {
 
     loadUsers() {
         //Fetch all Users
-        fetch('BankAPI/users', {
+        fetch('/BankAPI/users', {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -119,7 +119,7 @@ class NewAccountDialog extends React.Component {
         let amount = parseFloat(this.state.amount)
 
         //Make request
-        fetch('BankAPI/accounts', {
+        fetch('/BankAPI/accounts', {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

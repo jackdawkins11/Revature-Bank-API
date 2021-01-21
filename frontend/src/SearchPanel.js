@@ -31,7 +31,7 @@ class SearchPanel extends React.Component {
 
     loadStatus() {
         //Fetch all AccountStatus
-        fetch('BankAPI/accountStatus', {
+        fetch('/BankAPI/accountStatus', {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -53,7 +53,7 @@ class SearchPanel extends React.Component {
 
     loadUsers() {
         //Fetch all Users
-        fetch('BankAPI/users', {
+        fetch('/BankAPI/users', {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -77,7 +77,7 @@ class SearchPanel extends React.Component {
 
     loadAllAccounts() {
         //Fetch all accounts
-        fetch('BankAPI/accounts', {
+        fetch('/BankAPI/accounts', {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -106,7 +106,7 @@ class SearchPanel extends React.Component {
             return
         }
         //Fetch accounts by user
-        fetch(`BankAPI/accounts/owner/${selectedUser}`, {
+        fetch(`/BankAPI/accounts/owner/${selectedUser}`, {
             method: "GET"
         }).then(response => {
             //Check response status code
@@ -134,7 +134,7 @@ class SearchPanel extends React.Component {
             return
         }
         //Fetch accounts by status
-        fetch(`BankAPI/accounts/status/${selectedStatus}`, {
+        fetch(`/BankAPI/accounts/status/${selectedStatus}`, {
             method: "GET"
         }).then(response => {
             //Check response status code
